@@ -34,6 +34,8 @@
     	input.on('keydown',function (e){
     	
     	   setCaretPosition(this, 1000000);
+    	   
+    	   console.log('KEY ' + e.keyCode);
 
     	   if ((e.keyCode > 65 && e.keyCode < 90) || (e.keyCode > 106)) {//characters
         	   return;
@@ -45,6 +47,44 @@
 
     	   var val = input.val(),
     	       n = String.fromCharCode(e.keyCode);
+    	       
+    	   if(e.keyCode > 95 && e.keyCode < 106) {
+    	   
+        	   switch(e.keyCode) {
+            	   case 96:
+            	       n = 0;
+            	   break;
+            	   case 97:
+            	       n = 1;
+            	   break;        	   
+            	   case 98:
+            	       n = 2;
+            	   break;        	   
+            	   case 99:
+            	       n = 3;
+            	   break;
+            	   case 100:
+            	       n = 4;
+            	   break;        	   
+            	   case 101:
+            	       n = 5;
+            	   break;
+            	   case 102:
+            	       n = 6;
+            	   break;        	   
+            	   case 103:
+            	       n = 7;
+            	   break;        	   
+            	   case 104:
+            	       n = 8;
+            	   break;
+            	   case 105:
+            	       n = 9;
+            	   break;        	           	   
+        	   }
+           }
+  
+    	   console.log('N ' + n);
     	       
     	   console.log('last ', val);
 
