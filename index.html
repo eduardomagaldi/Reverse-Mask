@@ -13,7 +13,7 @@
 	
 	
 	
-	<input style="text-align: right; margin: 30px 0 0 200px; height: 30px; width: 600px; font-size: 30px;"/> 
+	<input type="tel" style="text-align: right; margin: 30px 0 0 200px; height: 30px; width: 600px; font-size: 30px;"/> 
 	
 	<script>
 
@@ -34,8 +34,6 @@
     	input.on('keydown',function (e){
     	
     	   setCaretPosition(this, 1000000);
-    	   
-    	   console.log('KEY ' + e.keyCode);
 
     	   if ((e.keyCode > 65 && e.keyCode < 90) || (e.keyCode > 106)) {//characters
         	   return;
@@ -83,6 +81,8 @@
             	   break;        	           	   
         	   }
            }
+           
+           //alert('KEY ' + e.keyCode + 'CHAR ' + n);
   
     	   console.log('N ' + n);
     	       
@@ -157,38 +157,6 @@ function setCaretPosition(ctrl, pos){
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    	
-    	
-    	
-    	
-    	
 	});
 	
 	   
